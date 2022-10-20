@@ -1,7 +1,7 @@
 // Vendor
 // ---------------------------------
 
-@import "vendor/normalize";
+// @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -20,6 +20,15 @@
 
 @import "blocks/btn";
 @import "blocks/modal";
+@import "blocks/header.scss";
+@import "blocks/intro.scss";
+@import "blocks/advantages.scss";
+@import "blocks/about.scss";
+@import "blocks/products.scss";
+@import "blocks/feedback.scss";
+@import "blocks/footer.scss";
+@import "blocks/socials.scss";
+@import "blocks/contacts.scss";
 
 // ---------------------------------
 

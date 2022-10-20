@@ -1,0 +1,51 @@
+.about {
+  padding-bottom: 100px;
+}
+
+.about__container {
+  width: 1220px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about__wrapper {
+  padding-left: 250px;
+}
+
+.about__title {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  color: $color-black-pearl;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.about__description {
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.about__img {
+  position: absolute;
+  left: 0px;
+  top: -20px;
+}
+
+.about__button {
+  color: #00B2FF;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #00B2FF;
+  border-radius: 3px;
+  margin-top: 20px;
+  padding: 14px 40px;
+}
