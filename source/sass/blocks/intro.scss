@@ -1,5 +1,5 @@
 .intro {
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);;
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
 }
 
 .intro__container {
@@ -7,15 +7,15 @@
   margin: 0 auto;
 }
 
-// .intro__background {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   z-index: -1;
-//   width: 100%;
-//   max-height: 880px;
-// }
+.intro__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  max-height: 760px;
+}
 
 .intro__wrapper {
   padding-top: 185px;

@@ -385,6 +385,9 @@ button,
 }
 
 .header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background-image: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -468,6 +471,16 @@ button,
 .intro__container {
   width: 1220px;
   margin: 0 auto;
+}
+
+.intro__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  max-height: 760px;
 }
 
 .intro__wrapper {
