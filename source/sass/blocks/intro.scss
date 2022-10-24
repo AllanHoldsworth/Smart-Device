@@ -2,11 +2,6 @@
   background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
 }
 
-.intro__container {
-  width: 1220px;
-  margin: 0 auto;
-}
-
 .intro__background {
   position: absolute;
   top: 0;
@@ -14,26 +9,43 @@
   right: 0;
   z-index: -1;
   width: 100%;
-  max-height: 760px;
+  height: 880px;
+
+  @include vp-1023 {
+    height: 640px;
+  }
 }
 
 .intro__wrapper {
-  padding-top: 185px;
+  padding-top: 300px;
   padding-bottom: 280px;
   padding-left: calc(125 / 1220) * 100%;
   padding-right: calc(60 / 1220) * 100%;
+
+  @include vp-1023 {
+    padding-top: 180px;
+    padding-bottom: 205px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .intro__title {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-secondary;
   font-size: 80px;
   line-height: 94px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 
   color: $color-alice-blue;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+    font-size: 64px;
+    line-height: 75px;
+  }
 }
 
 .intro__description {
@@ -41,16 +53,21 @@
   line-height: 34px;
   color: $color-alice-blue;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
   padding-right: calc(400 / 1220) * 100%;
+
+  @include vp-1023 {
+    padding-right: 0;
+    margin-bottom: 58px;
+  }
 }
 
 .intro__link {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-secondary;
   display: inline-block;
   vertical-align: baseline;
   text-transform: uppercase;
-  background-color: #00B2FF;
+  background-color: $color-deep-sky-blue;
   color: $color-alice-blue;
   border-radius: 3px;
   font-weight: 700;
@@ -58,5 +75,21 @@
   line-height: 21px;
   text-align: center;
   letter-spacing: 0.05em;
-  padding: 15px 25px;
+  padding: 16px 26px;
+
+  &:focus-visible {
+    outline: 2px solid $color-default-white;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include vp-1023 {
+    margin-left: 46px;
+  }
 }

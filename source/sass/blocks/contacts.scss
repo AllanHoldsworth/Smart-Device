@@ -4,6 +4,10 @@
   list-style-type: none;
 }
 
+.contacts__item {
+  margin-bottom: 6px;
+}
+
 .contacts__address {
   font-style: normal;
   line-height: 22px;
@@ -13,4 +17,12 @@
 .contacts__link {
   line-height: 25px;
   color: rgba(255, 255, 255, 0.7);
+
+  &:hover {
+    color: $color-deep-sky-blue;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }

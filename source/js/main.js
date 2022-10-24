@@ -1,12 +1,40 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
+  const moreButton = document.querySelector('.about__button');
+  const hiddenText = document.querySelector('.about__hidden-text');
+  const anchor = document.querySelector('a[href="#feedback"]');
+
+  anchor.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    const blockID = anchor.getAttribute('href');
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  })
+
+  if (moreButton && hiddenText) {
+  let isHidden = true;
+  moreButton.addEventListener('click', () => {
+    if (isHidden) {
+      hiddenText.style.display = "block";
+      moreButton.textContent = "Скрыть";
+      isHidden = false;
+    } else {
+      hiddenText.style.display = "none";
+      moreButton.textContent = "Подробнее";
+      isHidden = true;
+    }
+  });
+  }
 
   iosVhFix();
 

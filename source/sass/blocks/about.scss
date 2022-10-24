@@ -1,25 +1,35 @@
 .about {
-  padding-bottom: 100px;
+  padding-bottom: 117px;
+
+  @include vp-1023 {
+    padding-bottom: 75px;
+  }
 }
 
 .about__container {
-  width: 1220px;
-  margin: 0 auto;
   position: relative;
 }
 
 .about__wrapper {
   padding-left: 250px;
+
+  @include vp-1023 {
+    padding-left: 175px;
+  }
 }
 
 .about__title {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-secondary;
   color: $color-black-pearl;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   margin-top: 0;
   margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 6px;
+  }
 }
 
 .about__description {
@@ -28,24 +38,51 @@
   margin-bottom: 10px;
 }
 
+.about__description:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.about__hidden-text {
+  display: none;
+}
+
 .about__img {
   position: absolute;
-  left: 0px;
-  top: -20px;
+  left: 18px;
+  top: 0;
+
+  @include vp-1023 {
+    position: absolute;
+    left: 46px;
+  }
 }
 
 .about__button {
-  color: #00B2FF;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  min-width: 180px;
+  color: $color-deep-sky-blue;
+  font-family: $ff-secondary;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
+  justify-content: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   background-color: transparent;
-  border: 1px solid #00B2FF;
+  border: 1px solid $color-deep-sky-blue;
   border-radius: 3px;
   margin-top: 20px;
   padding: 14px 40px;
+
+  &:hover {
+    border-color: $color-black-pearl;
+    color: $color-black-pearl;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
 }

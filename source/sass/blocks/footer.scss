@@ -1,27 +1,40 @@
 .footer {
-  background-color: #041827;
+  background-color: $color-black-pearl;
   padding-top: 50px;
   padding-bottom: 55px;
 }
 
 .footer__container {
-  width: 1220px;
-  margin: 0 auto;
   display: flex;
+  // flex-wrap: wrap;
 }
 
 .footer__wrapper {
-  margin-right: calc(160 / 1220) * 100%;
+  margin-right: 13%;
+
+  @include vp-1023 {
+    display: flex;
+    margin-bottom: 34px;
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .footer__logo-link {
   display: flex;
   margin-bottom: 30px;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
 }
 
 .footer-nav {
-  padding-top: 5px;
-  margin-right: calc(30 / 1220) * 100%;
+  margin-right: 1%;
+
+  @include vp-1023 {
+    margin-right: 0;
+  }
 }
 
 .footer-nav__list {
@@ -30,16 +43,34 @@
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 0 30px;
+  grid-gap: 0 15px;
+
+  @include vp-1023 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 
 .footer-nav__item {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
 }
 
 .footer-nav__link {
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
+
+  &:hover {
+    color: $color-deep-sky-blue;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .footer-nav__subtitle {
@@ -50,7 +81,7 @@
   line-height: 16px;
   margin-top: 0;
   margin-bottom: 20px;
-  color: white;
+  color: $color-default-white;
 }
 
 .footer__subtitle {
@@ -63,5 +94,16 @@
   line-height: 16px;
   margin-top: 0;
   margin-bottom: 20px;
-  color: white;
+  color: $color-default-white;
+}
+
+.footer__bottom-wrapper {
+  display: flex;
+  padding-top: 5px;
+
+  @include vp-1023 {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
 }

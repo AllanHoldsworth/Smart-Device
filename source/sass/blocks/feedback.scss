@@ -1,34 +1,66 @@
 .feedback {
-  background-color: #00B3FF;
-  padding-top: 170px;
+  background-color: $color-deep-sky-blue;
+  background-image: linear-gradient(139.5deg,rgba(4,24,39,.5) 33.5%, $color-deep-sky-blue 33.6%);
+  padding-top: 168px;
   padding-bottom: 250px;
+  position: relative;
+
+  @include vp-1023 {
+    background-image: none;
+    padding-top: 45px;
+    padding-bottom: 125px;
+  }
 }
 
-.feedback__container {
-  width: 1220px;
-  margin: 0 auto;
+.feedback__background {
+  position: absolute;
+  top: 246px;
+  width: 510px;
+  height: 285px;
+
+  @include vp-1279 {
+    width: 383px;
+    height: 214px;
+    transform: translate(20%, 10%);
+  }
+
+  @include vp-1023 {
+    display: none;
+  }
 }
 
 .feedback__wrapper {
-  padding-left: calc(625 / 1220) * 100%;
+  padding-left: 51.6%;
   padding-right: 12px;
+
+  @include vp-1023 {
+    padding: 0;
+  }
 }
 
 .feedback__title {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-secondary;
   font-size: 36px;
   line-height: 51px;
-  color: white;
+  color: $color-default-white;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 7px;
+  }
 }
 
 .feedback__description {
   display: block;
-  color: white;
+  color: $color-default-white;
   line-height: 22px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
+
+  @include vp-1023 {
+    margin-bottom: 25px;
+  }
 }
 
 .form__inputs {
@@ -41,7 +73,14 @@
   background: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
   border: none;
-  padding: 15px;
+  padding: 17px;
+}
+
+.form__inputs input::placeholder {
+  color: $color-default-white;
+  font-family: $ff-primary;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .form__inputs input:not(:last-child) {
@@ -55,11 +94,22 @@
   height: 155px;
   padding: 25px 15px;
   border: none;
-  margin-bottom: 35px;
+  margin-bottom: 26px;
+
+  @include vp-1023 {
+    margin-bottom: 29px;
+  }
+}
+
+.form__wrapper textarea::placeholder {
+  color: $color-default-white;
+  font-family: $ff-primary;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .form__wrapper button {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-secondary;
   border: none;
   font-weight: 700;
   font-size: 16px;
@@ -67,12 +117,32 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: white;
+  color: $color-default-white;
   background-color: #041427;
   padding: 15px 0;
   width: calc(265 / 580) * 100%;
   border-radius: 3px;
   margin-right: calc(50 / 580) * 100%;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid $color-default-white;
+  }
+
+  &:hover {
+    background-color: $color-default-white;
+    color: $color-default-black;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  @include vp-1023 {
+    width: 39.5%;
+    padding: 12px 0;
+    margin-right: calc(85 / 670) * 100%;
+  }
 }
 
 .form__field {
@@ -81,8 +151,36 @@
 }
 
 .form__field label {
+  position: relative;
   font-size: 14px;
   line-height: 16px;
-  color: white;
+  color: $color-default-white;
   opacity: 0.8;
+  padding-left: 25px;
+  align-self: flex-end;
+}
+
+.form__field label::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+  left: 0;
+  transform: translateY(50%);
+  cursor: pointer;
+}
+
+.form__field input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: translate(40%, -60%);
+  width: 7px;
+  height: 4px;
+  background-image: url("../../img/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }

@@ -1,22 +1,26 @@
 .products {
-  background-color: #041827;
-  padding-top: 70px;
+  background-color: $color-black-pearl;
+  padding-top: 67px;
   padding-bottom: 140px;
-}
 
-.products__container {
-  width: 1220px;
-  margin: 0 auto;
+  @include vp-1023 {
+    padding-top: 55px;
+    padding-bottom: 75px;
+  }
 }
 
 .products__title {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  color: white;
+  font-family: $ff-secondary;
+  color: $color-default-white;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   margin-top: 0;
   margin-bottom: 50px;
+
+  @include vp-1023 {
+    margin-bottom: 38px;
+  }
 }
 
 .products-list {
@@ -24,6 +28,10 @@
   padding: 0;
   list-style-type: none;
   display: flex;
+
+  @include vp-1023 {
+    flex-direction: column;
+  }
 }
 
 .products-list__item {
@@ -32,10 +40,46 @@
   width: calc(350 / 1220) * 100%;
   position: relative;
   overflow:  hidden;
+
+  &:hover {
+    box-shadow: 0px 5px 15px $color-deep-sky-blue;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  @include vp-1023 {
+    width: 100%;
+    padding: 37px 45px;
+    min-height: 250px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.products-list__link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+  background-color: $color-deep-sky-blue;
+  width: 60px;
+  height: 60px;
+  border-radius: 3px 0 0 0;
+  background-image: url("../../img/arrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .products-list__item:not(:last-child) {
   margin-right: calc(85 / 1220) * 100%;
+
+  @include vp-1023 {
+    margin-right: 0;
+  }
 }
 
 .products-list__img {
@@ -47,14 +91,25 @@
   width:350px;
   height:650px;
   object-fit:cover;
+
+  @include vp-1023 {
+    width: 100%;
+  }
 }
 
 .products-list__title {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  color: white;
+  font-family: $ff-secondary;
+  color: $color-default-white;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   width: calc(210 / 350) * 100%;
   padding-left: calc(40 / 350) * 100%;
+  margin-top: 49px;
+
+  @include vp-1023 {
+    margin: 0;
+    padding-left: 0;
+    width: 100%;
+  }
 }
