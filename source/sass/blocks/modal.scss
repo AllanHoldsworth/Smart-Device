@@ -12,7 +12,6 @@
   -webkit-overflow-scrolling: touch;
 
   background-color: rgba($color-default-black, 0.8);
-  transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
 
@@ -59,15 +58,11 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    width: 500px;
+    height: auto;
     padding: 40px;
 
-    background-color: $color-default-white;
-
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
+    background-color: $color-deep-sky-blue;
   }
 
   &__close-btn {
@@ -80,7 +75,7 @@
     height: 40px;
     padding: 0;
 
-    background: $color-transparent;
+    background: $color-deep-sky-blue;
     border: none;
     cursor: pointer;
   }
@@ -109,11 +104,57 @@
     transition: none;
   }
 
-  &.is-active {
+  &--is-active {
     transform: scale(1);
     visibility: visible;
     opacity: 1;
 
     pointer-events: auto;
   }
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 30px;
+  font-family: $ff-secondary;
+  color: $color-default-white;
+}
+
+.modal__description {
+  line-height: 22px;
+  color: $color-default-white;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.form__inputs--modal {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form__inputs--modal input {
+  width: 100%;
+}
+
+.form__inputs--modal input:not(:last-child) {
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+
+.form__wrapper--modal button {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.form__field--modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__field--modal label {
+  align-self: flex-start;
 }

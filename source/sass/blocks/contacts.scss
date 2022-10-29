@@ -6,12 +6,22 @@
 
 .contacts__item {
   margin-bottom: 6px;
+
+  @include vp-1023 {
+    margin-bottom: 5px;
+  }
 }
 
 .contacts__address {
   font-style: normal;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 14px;
+  }
 }
 
 .contacts__link {
@@ -24,5 +34,10 @@
 
   &:active {
     opacity: 0.8;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
   }
 }
