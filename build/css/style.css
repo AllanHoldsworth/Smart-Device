@@ -363,6 +363,7 @@ button,
 
 .intro {
   background-image: url("../../img/main-background.jpg");
+  background-color: #041827;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -451,10 +452,6 @@ button,
 
 .advantages-list__icon {
   fill: #00b2ff;
-}
-
-.advantages-list__icon:hover {
-  fill: red;
 }
 
 .advantages-list__item {
@@ -613,6 +610,7 @@ button,
   position: relative;
   overflow: hidden;
   padding: 27px 5px;
+  background-color: #041827;
 }
 
 .products-list__item:hover {
