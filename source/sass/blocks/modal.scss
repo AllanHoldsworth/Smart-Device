@@ -129,32 +129,3 @@
   margin-bottom: 40px;
 }
 
-.form__inputs--modal {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.form__inputs--modal input {
-  width: 100%;
-}
-
-.form__inputs--modal input:not(:last-child) {
-  margin-bottom: 20px;
-  margin-right: 0;
-}
-
-.form__wrapper--modal button {
-  width: 100%;
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.form__field--modal {
-  display: flex;
-  flex-direction: column;
-}
-
-.form__field--modal label {
-  align-self: flex-start;
-}

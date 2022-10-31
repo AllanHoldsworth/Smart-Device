@@ -117,16 +117,20 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   if (moreButton && (hiddenText || hiddenMobileText)) {
-  let isHidden = true;
-  moreButton.addEventListener('click', () => {
+    let isHidden = true;
+    moreButton.addEventListener('click', () => {
     if (isHidden) {
       hiddenText.style.display = "block";
       hiddenMobileText.style.display = "block"
       moreButton.textContent = "Скрыть";
       isHidden = false;
-    } else {
+    } else if (mediaQuery.matches) {
       hiddenText.style.display = "none";
       hiddenMobileText.style.display = "none"
+      moreButton.textContent = "Подробнее";
+      isHidden = true;
+    } else {
+      hiddenText.style.display = "none";
       moreButton.textContent = "Подробнее";
       isHidden = true;
     }

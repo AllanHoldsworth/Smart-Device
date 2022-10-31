@@ -48,20 +48,6 @@
   }
 }
 
-.header-nav__icon--mobile {
-  display: none;
-
-  @include vp-767 {
-    display: flex;
-  }
-}
-
-.header-nav__icon--desktop {
-  @include vp-767 {
-    display: none;
-  }
-}
-
 .header-nav__list {
   padding: 0;
   margin: 0;
