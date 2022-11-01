@@ -51,8 +51,8 @@ const optimizeImages = () =>
       .src('build/img/**/*.{png,jpg}')
       .pipe(
           imagemin([
-            imagemin.optipng({optimizationLevel: 3}),
-            imagemin.mozjpeg({quality: 75, progressive: true})
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.mozjpeg({quality: 50, progressive: true})
           ])
       )
       .pipe(gulp.dest('build/img'));
