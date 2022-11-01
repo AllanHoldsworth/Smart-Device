@@ -26,37 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   accordion.classList.remove('accordion--no-js');
   initModals();
-  // if (modalButton && modal) {
-  //   modalButton.addEventListener('click', () => {
-  //     modal.classList.add('modal--is-active');
-  //     focusedInput.focus();
-  //     document.body.style.position = 'fixed';
-  //     document.body.style.overflow = 'visible';
-  //     document.body.style.top = `-${window.scrollY}px`;
-  //   });
-  // }
-
-  // if(modalOverlay) {
-  //   modalOverlay.addEventListener('click', (evt) => {
-  //     if(evt.target === modalOverlay) {
-  //       modal.classList.remove('modal--is-active');
-  //       const scrollY = document.body.style.top;
-  //       document.body.style.position = '';
-  //       document.body.style.top = '';
-  //       window.scrollTo(0, parseInt(scrollY || '0') * -1);
-  //     }
-  //   });
-  // }
-
-  // if(closeButton) {
-  //   closeButton.addEventListener('click', () => {
-  //     modal.classList.remove('modal--is-active');
-  //     const scrollY = document.body.style.top;
-  //     document.body.style.position = '';
-  //     document.body.style.top = '';
-  //     window.scrollTo(0, parseInt(scrollY || '0') * -1);
-  //   })
-  // }
 
   if (accordionTitles) {
     accordionTitles.forEach((title, i) => {
@@ -145,11 +114,13 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   let inputTel = document.querySelector('.form__inputs input[type="tel"]');
+  let modalTel = document.querySelector('.form__inputs--modal input[type="tel"]');
   console.log(inputTel);
   let maskOptions = {
     mask: '+{7}(000)000-00-00'
   };
   const mask = IMask(inputTel, maskOptions);
+  const modalMask = IMask(modalTel, maskOptions);
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
