@@ -161,7 +161,9 @@ export class Modals {
     }
 
     if (this._lockFocus) {
-      this._focusLock.lock('.modal.is-active', this._startFocus);
+      setTimeout(() => {
+        this._focusLock.lock('.modal.is-active', this._startFocus);
+      }, this._eventTimeout);
     }
 
     setTimeout(() => {

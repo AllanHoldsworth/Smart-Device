@@ -77,10 +77,12 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    max-width: 99%;
   }
 
   @include vp-767 {
     display: block;
+    max-width: unset;
   }
 }
 
@@ -118,7 +120,7 @@
   font-size: 15px;
   line-height: 16px;
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 21px;
   color: $color-default-white;
 
   @include vp-767 {

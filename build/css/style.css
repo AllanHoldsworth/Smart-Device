@@ -499,10 +499,6 @@ button,
   line-height: 22px;
 }
 
-.advantages-list__item--mobile .advantages-list__subtitle {
-  margin-bottom: 15px;
-}
-
 .about {
   padding-bottom: 117px;
 }
@@ -731,6 +727,10 @@ button,
   color: #ffffff;
 }
 
+.form__inputs input:hover {
+  background-color: rgba(49, 49, 50, 0.15);
+}
+
 .form__inputs input::-webkit-input-placeholder {
   color: #ffffff;
   opacity: 0.8;
@@ -785,6 +785,11 @@ button,
   border: none;
   margin-bottom: 26px;
   color: #ffffff;
+}
+
+.form__wrapper textarea:hover,
+.form--modal textarea:hover {
+  background-color: rgba(49, 49, 50, 0.15);
 }
 
 .form__wrapper textarea::-webkit-input-placeholder,
@@ -1023,7 +1028,7 @@ button,
   font-size: 15px;
   line-height: 16px;
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 21px;
   color: #ffffff;
 }
 
@@ -1221,6 +1226,15 @@ button,
   margin-bottom: 40px;
 }
 
+.modal.is-active {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1381,6 +1395,10 @@ button,
     margin-bottom: 9px;
   }
 
+  .advantages-list__item--mobile .advantages-list__subtitle {
+    margin-bottom: 3px;
+  }
+
   .about {
     padding-bottom: 80px;
   }
@@ -1524,6 +1542,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    max-width: 99%;
   }
 
   .footer-nav__item {
@@ -1652,6 +1671,10 @@ button,
   .advantages-list__item p {
     font-size: 14px;
     line-height: 19px;
+  }
+
+  .advantages-list__item--mobile .advantages-list__subtitle {
+    margin-bottom: 15px;
   }
 
   .about {
@@ -1834,6 +1857,7 @@ button,
 
   .footer-nav__list {
     display: block;
+    max-width: unset;
   }
 
   .footer-nav__link {
