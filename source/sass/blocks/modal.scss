@@ -61,7 +61,7 @@
     width: 500px;
     height: auto;
     padding: 40px;
-
+    border-radius: 3px;
     background-color: $color-deep-sky-blue;
   }
 
@@ -111,10 +111,6 @@
 
     pointer-events: auto;
   }
-}
-
-.modal__content {
-  border-radius: 3px;
 }
 
 .modal__title {

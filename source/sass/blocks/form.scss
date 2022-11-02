@@ -90,6 +90,7 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  flex-shrink: 0;
   color: $color-default-white;
   background-color: #041427;
   padding: 15px 0;
@@ -128,10 +129,23 @@
 .form__field {
   display: flex;
   align-items: center;
+  position: relative;
 
   @include vp-767 {
     flex-direction: column;
   }
+}
+
+.form__field input[type="checkbox"] {
+  right: 44.4%;
+  top: 60%;
+}
+
+.form__field--modal input[type="checkbox"] {
+  top: unset;
+  right: unset;
+  left: 2%;
+  bottom: 10%;
 }
 
 .form__field input:focus-visible + label::before,

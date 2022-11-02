@@ -23,6 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const closeButton = modal.querySelector('.modal__close-btn');
   const focusedInput = modal.querySelector('input[type="text"]');
   const accordion = document.querySelector('.accordion');
+  const submitButton = document.querySelector('.form button[type="submit"]');
+  const modalSubmitButton = document.querySelector('.modal button[type="submit"]');
 
   accordion.classList.remove('accordion--no-js');
   initModals();
@@ -44,7 +46,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
 
   function removeOpen(index) {
     accordionTitles.forEach((title, i) => {
@@ -115,12 +116,33 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let inputTel = document.querySelector('.form__inputs input[type="tel"]');
   let modalTel = document.querySelector('.form__inputs--modal input[type="tel"]');
+
   console.log(inputTel);
   let maskOptions = {
     mask: '+{7}(000)000-00-00'
   };
-  const mask = IMask(inputTel, maskOptions);
+
+  const feedbackMask = IMask(inputTel, maskOptions);
   const modalMask = IMask(modalTel, maskOptions);
+  const message = ('Введите корректный номер телефона');
+
+  function validate(input, mask) {
+    if (mask.unmaskedValue && mask.unmaskedValue.length <= 10) {
+      console.log(mask.unmaskedValue.length);
+      input.setCustomValidity(message);
+    } else {
+      input.setCustomValidity('');
+    }
+  }
+
+  submitButton.addEventListener('click', () => {
+    validate(inputTel, feedbackMask);
+  });
+
+  modalSubmitButton.addEventListener('click', () => {
+    validate(modalTel, modalMask);
+  });
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {

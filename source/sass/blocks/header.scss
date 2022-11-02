@@ -53,25 +53,30 @@
   margin: 0;
   list-style-type: none;
   color: $color-default-white;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 10px 23px;
+  grid-template-columns: 1fr 1fr;
   width: calc(480 / 1220) * 100%;
-  margin-right: 12%;
+  margin-right: auto;
+  margin-left: auto;
 
   @include vp-1279 {
-    width: calc(520 / 1220) * 100%;
-    margin-right: calc(105 / 1220) * 100%;
+    width: 42%;
   }
 
   @include vp-1023 {
+    grid-gap: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
+    margin: 0;
     margin-left: auto;
-    margin-right: 20px;
     width: 50%;
     transform: translateY(-7px);
   }
 
   @include vp-767 {
+    grid-gap: 10px 20px;
     margin-right: 8px;
     transform: unset;
   }
@@ -95,22 +100,18 @@
   @include vp-1279 {
     font-size: 14px;
   }
-}
-
-.header-nav__item:not(:last-child) {
-  margin-right: 24.91%;
-
-  @include vp-1279 {
-    margin-right: 20%;
-  }
 
   @include vp-1023 {
     margin-right: 20px;
   }
+
+  @include vp-767 {
+    margin-right: 0;
+  }
 }
 
 .header-nav__link--logo {
-  margin-right: calc(160 / 1220) * 100%;
+  flex-shrink: 0;
 
   @include vp-767 {
     margin-right: 0;
@@ -126,9 +127,10 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
+  flex-shrink: 0;
   padding: 10px 15px;
-  width: calc(160 / 1220) * 100%;
-  min-width: fit-content;
+  max-width: 240px;
+  margin-right: 62px;
 
   &:focus-visible {
     outline: 2px solid $color-default-white;
