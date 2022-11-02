@@ -92,7 +92,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (isHidden) {
       hiddenText.style.display = "block";
       hiddenMobileText.style.display = "block"
-      moreButton.textContent = "Скрыть";
+      moreButton.textContent = "Свернуть";
       isHidden = false;
     } else if (mediaQuery.matches) {
       hiddenText.style.display = "none";

@@ -113,6 +113,10 @@
   }
 }
 
+.modal__content {
+  border-radius: 3px;
+}
+
 .modal__title {
   margin-top: 0;
   margin-bottom: 15px;
@@ -124,6 +128,7 @@
 
 .modal__description {
   line-height: 22px;
+  padding-right: 25px;
   color: $color-default-white;
   margin-top: 0;
   margin-bottom: 40px;

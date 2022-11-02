@@ -39,7 +39,7 @@ const refresh = (done) => {
   done();
 };
 
-const build = gulp.series(clean, svgo, copy, compileStyles, sprite, js);
+const build = gulp.series(clean, svgo, copy, compileStyles, sprite, js, optimizeImages);
 const start = gulp.series(build, syncServer);
 
 export { optimizeImages as imagemin, createWebp as webp, build, start };

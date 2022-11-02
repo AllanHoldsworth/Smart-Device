@@ -69,11 +69,16 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0 15px;
+  column-count: 2;
+  column-gap: 9px;
+
+  @include vp-1279 {
+    column-gap: 30px;
+  }
 
   @include vp-1023 {
+    column-count: unset;
+    column-gap: unset;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -92,6 +97,10 @@
   @include vp-1023 {
     margin-bottom: 5px;
   }
+}
+
+.footer-nav__item--break {
+  break-after: column;
 }
 
 .footer-nav__link {
@@ -120,8 +129,12 @@
   font-size: 15px;
   line-height: 16px;
   margin-top: 0;
-  margin-bottom: 21px;
+  margin-bottom: 29px;
   color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 19px;
+  }
 
   @include vp-767 {
     padding: 21px 0;

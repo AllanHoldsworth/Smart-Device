@@ -1,5 +1,5 @@
 .intro {
-  background-image: url("../../img/main-background.jpg");
+  background-image: url("../img/main-background.jpg");
   background-color: $color-black-pearl;
   background-repeat: no-repeat;
   background-position: center;
@@ -7,15 +7,15 @@
 
   @media (min-width: 1023px) {
     @include retina {
-      background-image: url("../../img/main-background@2x.jpg");
+      background-image: url("../img/main-background@2x.jpg");
     }
   }
 
   @include vp-1023 {
-    background-image: url("../../img/main-background-tablet.jpg");
+    background-image: url("../img/main-background-tablet.jpg");
 
     @include retina {
-      background-image: url("../../img/main-background-tablet@2x.jpg");
+      background-image: url("../img/main-background-tablet@2x.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100% 100%;
@@ -23,10 +23,10 @@
   }
 
   @include vp-767 {
-    background-image: url("../../img/main-background-mobile.jpg");
+    background-image: url("../img/main-background-mobile.jpg");
 
     @include retina {
-      background-image: url("../../img/main-background-mobile@2x.jpg");
+      background-image: url("../img/main-background-mobile@2x.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100% 100%;
@@ -125,6 +125,7 @@
   text-align: center;
   letter-spacing: 0.05em;
   padding: 16px 26px;
+  user-select: none;
 
   &:focus-visible {
     outline: 2px solid $color-default-white;

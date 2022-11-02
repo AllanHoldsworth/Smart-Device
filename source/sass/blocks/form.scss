@@ -58,13 +58,17 @@
   }
 
   @include vp-1023 {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 
   @include vp-767 {
     height: 180px;
     margin-bottom: 25px;
   }
+}
+
+.form--modal textarea {
+  margin-bottom: 15px;
 }
 
 .form__wrapper textarea::placeholder,
@@ -93,6 +97,7 @@
   border-radius: 3px;
   margin-right: calc(50 / 580) * 100%;
   cursor: pointer;
+  user-select: none;
 
   &:focus-visible {
     outline: 2px solid $color-default-white;
@@ -129,6 +134,11 @@
   }
 }
 
+.form__field input:focus-visible + label::before,
+.form__field--modal input:focus-visible + label::before {
+  outline: 2px solid $color-black-pearl;
+}
+
 .form__field label {
   position: relative;
   font-size: 14px;
@@ -137,6 +147,7 @@
   opacity: 0.8;
   padding-left: 25px;
   align-self: flex-end;
+  order: 1;
 
   @include vp-767 {
     align-self: flex-start;
@@ -165,7 +176,7 @@
   transform: translate(40%, -60%);
   width: 7px;
   height: 4px;
-  background-image: url("../../img/svg/checkmark.svg");
+  background-image: url("../img/svg/checkmark.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -189,6 +200,7 @@
   width: 100%;
   margin: 0;
   margin-bottom: 20px;
+  user-select: none;
 }
 
 .form__field--modal {
@@ -198,4 +210,5 @@
 
 .form__field--modal label {
   align-self: flex-start;
+  order: 1;
 }
