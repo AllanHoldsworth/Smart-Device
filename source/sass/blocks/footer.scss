@@ -100,7 +100,7 @@
 }
 
 .footer-nav__item--break {
-  break-after: column;
+  break-before: avoid-column;
 }
 
 .footer-nav__link {

@@ -38,6 +38,7 @@
   display: flex;
   line-height: 18px;
   color: $color-alice-blue;
+  align-self: flex-start;
 
   &:hover {
     color: $color-deep-sky-blue;
@@ -131,6 +132,8 @@
   padding: 10px 15px;
   max-width: 240px;
   margin-right: 62px;
+  align-self: flex-start;
+  margin-top: 7px;
 
   &:focus-visible {
     outline: 2px solid $color-default-white;

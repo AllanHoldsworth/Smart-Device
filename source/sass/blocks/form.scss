@@ -162,6 +162,7 @@
   padding-left: 25px;
   align-self: flex-end;
   order: 1;
+  cursor: pointer;
 
   @include vp-767 {
     align-self: flex-start;

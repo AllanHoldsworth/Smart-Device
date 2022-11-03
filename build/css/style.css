@@ -296,6 +296,8 @@ button,
   display: flex;
   line-height: 18px;
   color: #f2f5f7;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .header-nav__link:hover {
@@ -344,6 +346,9 @@ button,
   padding: 10px 15px;
   max-width: 240px;
   margin-right: 62px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 7px;
 }
 
 .header-nav__button:focus-visible {
@@ -598,7 +603,7 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 6% 85px;
+  grid-gap: 50px 85px;
 }
 
 .products-list__item {
@@ -922,6 +927,7 @@ button,
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
+  cursor: pointer;
 }
 
 .form__field label::before {
@@ -1048,9 +1054,9 @@ button,
 }
 
 .footer-nav__item--break {
-  -webkit-column-break-after: column;
-  -moz-column-break-after: column;
-  break-after: column;
+  -webkit-column-break-before: avoid-column;
+  -moz-column-break-before: avoid-column;
+  break-before: avoid-column;
 }
 
 .footer-nav__link {
